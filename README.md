@@ -1,2 +1,2 @@
 # Exercisms
-Repositório de exercícios de programação.
+Repositório de exercícios de lógica de programação.
