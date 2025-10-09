@@ -14,4 +14,3 @@ for letra in frase:
 for letra, contagem in frequencia.items():
     print(f"A letra '{letra}' aparece {contagem} vezes.")
     
-    

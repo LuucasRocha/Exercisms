@@ -15,7 +15,7 @@ media_notas = sum(notas) / len(notas)
 maior_nota = max(notas)
 menor_nota = min(notas)
     
-print(f"Média das nota: {media_notas}")
+print(f"Média das notas: {media_notas}")
 print(f"Maior nota: {maior_nota}")
 print(f"Menor nota: {menor_nota}")
      
