@@ -20,4 +20,6 @@ for num in range(intervalo_inicial, intervalo_final + 1):
         lista_primos.append(num)
 
 print(lista_primos)
+print("Fim do programa.")   
+
 
