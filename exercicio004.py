@@ -9,3 +9,4 @@ for i in range(1, limite + 1):
 print(f"Os números inteiros entre 1 e o limite superior definido é: {lista_numeros}")
 
 
+
