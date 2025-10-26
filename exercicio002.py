@@ -3,8 +3,9 @@
 #Elabore um algoritmo que leia o valor do produto e imprima o valor de venda para
 #o produto.
 
-valor_compra = float(input("Digite o valor da compra: R$ "))
-if valor_compra < 20.00:
+valor_compra = float(input("Digite o valor de compra do produto: R$ "))
+
+if valor_compra < 20.0:
     lucro = 0.45
 else:
     lucro = 0.30
