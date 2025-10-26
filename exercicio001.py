@@ -1,14 +1,15 @@
 ## Exercício 001 - Crie um programa que diga se denominada palavra é um palíndromo.
 
 def eh_palindromo(palavra):
-    palavra = palavra.lower().replace(" ", "")
-    return palavra == palavra[::-1] 
+    palavra = palavra.replace(" ", "").lower()
+    return palavra == palavra[::-1]
 
-palavra = input("Digite uma palavra ou frase: ")   
-if eh_palindromo(palavra):
-    print(f"A palavra ou frase '{palavra}' é um palíndromo.")
-else:
-    print(f"A palavra ou frase '{palavra}' não é um palíndromo.")
+while True:
     
-print("Fim do programa.")
+    entrada = input("Digite uma palavra: ")
+
+    if eh_palindromo(entrada):
+        print("A palavra digitada é um palíndromo.")
+    else:
+        print("A palavra digitada não é um palíndromo.")
 
