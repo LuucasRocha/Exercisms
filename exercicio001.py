@@ -10,4 +10,5 @@ if eh_palindromo(palavra):
 else:
     print(f"A palavra ou frase '{palavra}' não é um palíndromo.")
     
+print("Fim do programa.")
 
