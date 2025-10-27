@@ -2,6 +2,7 @@
 
 def analisa_lista(lista):
     return f"Maior: {max(lista)} | Menor: {min(lista)}"
+
 '''
 def analisa_lista(lista):
     maior = menor = lista[0]
@@ -13,5 +14,9 @@ def analisa_lista(lista):
     return f"Maior: {maior} | Menor: {menor}"
 '''
 
-lista = [1,2,3,4,5,6,7,8,9,10]
-print(analisa_lista(lista))
+entrada = input("Digite uma lista de números separados por espaço.")
+
+lista = [int(x) for x in entrada.split()]
+analise = analisa_lista(lista)
+
+print(analise)
