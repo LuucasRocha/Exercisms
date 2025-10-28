@@ -7,9 +7,9 @@ def mais_comum(lista):
     if not lista:
         return "Lista vazia."
     cont = Counter(lista)
-    mais_comum = max(cont.values())
+    mais_frequente = max(cont.values())
     for item in lista:
-        if cont[item] == mais_comum:
+        if cont[item] == mais_frequente:
             return item
 
 entrada = input("Digite uma lista de números separados por espaço: ")
