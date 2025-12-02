@@ -3,14 +3,11 @@
 #Elabore um algoritmo que leia o valor do produto e imprima o valor de venda para
 #o produto.
 
-valor_compra = float(input("Digite o valor de compra do produto: R$ "))
-
-if valor_compra < 20.0:
-    lucro = 0.45
-else:
-    lucro = 0.30
-
-valor_venda = valor_compra * (1 + lucro)
-print(f"O valor de venda para o produto é: R$ {valor_venda:.2f}")
-
-
+def gera_valor(n):
+    if n < 20:
+        lucro = n * 0.45
+    else:
+        lucro = n * 0.30
+    return n + lucro 
+    
+print(gera_valor(10))
