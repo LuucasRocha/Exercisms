@@ -4,7 +4,7 @@ def imprime_inteiros(n):
     for i in range(1, n + 1):
         print(i)
 
-imprime_inteiros(40)
+imprime_inteiros()
 
 
 
