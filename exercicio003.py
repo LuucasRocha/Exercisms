@@ -14,38 +14,35 @@ Dica de Lógica: Este exercício envolve o uso de estruturas de dados (listas/ar
 tarefas = []
 
 adicionar_tarefa = "1"
-visualizar_tarefas = "2"
+visualizar_tarefa = "2"
 remover_tarefa = "3"
 sair = "4"
 opcao = ""
 
 while opcao != sair:
-    print("Menu:")
-    print("1. Adicionar Tarefa")
-    print("2. Visualizar Tarefas")
-    print("3. Remover Tarefa")
+    print("Gerenciador de tarefas: ")
+    print("1. Adicionar tarefa")
+    print("2. Visualizar tarefa")
+    print("3. Remover tarefa")
     print("4. Sair")
+    
     opcao = input("Escolha uma opção: ")
-
+    
     if opcao == adicionar_tarefa:
         tarefa = input("Digite o nome da tarefa: ")
         tarefas.append(tarefa)
         print("Tarefa adicionada com sucesso!")
-
-    elif opcao == visualizar_tarefas:
-        print("Lista de Tarefas:")
+        
+    if opcao == visualizar_tarefa:
+        print("Tarefas atuais: ")
         for i, t in enumerate(tarefas):
             print(f"{i + 1}. {t}")
-
-    elif opcao == remover_tarefa:
-        indice = int(input("Digite o número da tarefa que deseja remover: ")) - 1
-        if 0 <= indice < len(tarefas):
+    
+    if opcao == remover_tarefa:
+        indice = int(input("Digite o índice da tarefa que deseja remover: ")) - 1
+        if 0 <= indice <= len(tarefas):
             tarefas.pop(indice)
-            print("Tarefa removida com sucesso!")
-        else:
-            print("Tarefa não encontrada.")
-
-    elif opcao == sair:
-        print("Saindo do programa...")
-    else:
-        print("Opção inválida. Tente novamente.")
+        print("Tarefa removida com sucesso.")
+    
+    if opcao == sair:
+        print("Programa encerrado.")
