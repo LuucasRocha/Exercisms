@@ -20,29 +20,26 @@ sair = "4"
 opcao = ""
 
 while opcao != sair:
-    print("Gerenciador de tarefas: ")
+    print("--- Gerenciador de tarefas ---")
     print("1. Adicionar tarefa")
     print("2. Visualizar tarefa")
     print("3. Remover tarefa")
-    print("4. Sair")
+    print("4. Encerrar programa")
     
     opcao = input("Escolha uma opção: ")
     
     if opcao == adicionar_tarefa:
-        tarefa = input("Digite o nome da tarefa: ")
+        tarefa = input("Digite a descrição da tarefa: ")
         tarefas.append(tarefa)
-        print("Tarefa adicionada com sucesso!")
-        
-    if opcao == visualizar_tarefa:
+        print("Tarefa adicionada com sucesso.")
+    elif opcao == visualizar_tarefa:
         print("Tarefas atuais: ")
         for i, t in enumerate(tarefas):
             print(f"{i + 1}. {t}")
-    
-    if opcao == remover_tarefa:
-        indice = int(input("Digite o índice da tarefa que deseja remover: ")) - 1
-        if 0 <= indice <= len(tarefas):
+    elif opcao == remover_tarefa:
+        indice = int(input("Digite o índice na tarefa que deseja remover: ")) -1
+        if 0 < indice <= len(tarefas):
             tarefas.pop(indice)
         print("Tarefa removida com sucesso.")
-    
-    if opcao == sair:
+    elif opcao == sair:
         print("Programa encerrado.")
