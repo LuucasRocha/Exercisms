@@ -1,25 +1,17 @@
 #Criar um programa que encontre todos os números primos em um intervalo definido pelo usuário.
 
-def eh_primo(n):
-    if n <= 1:
-        return False
-    for i in range(2, n):
-        if n % i == 0:
-            return False   
-            break
-    else:
-        return True
-    
-intervalo_inicial = int(input("Digite o valor inicial do intervalo: "))
-intervalo_final =  int(input("Digite o valor final do intervalo: "))
+def imprime_primos(n1, n2):
+    lista_primos = []
+    for num in range(n1, n2 + 1):
+        if num > 1:
+            eh_primo = True
+            for i in range(2, int(num**0.5) + 1):
+                if num % i:
+                    eh_primo = False
+            if eh_primo:
+                lista_primos.append(num)
+    return lista_primos
 
-lista_primos = []
-
-for num in range(intervalo_inicial, intervalo_final + 1):
-    if eh_primo(num):
-        lista_primos.append(num)
-
-print(lista_primos)
-print("Fim do programa.")   
+print(imprime_primos())
 
 
