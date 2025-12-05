@@ -1,10 +1,13 @@
 """Criar um programa que imprima todos os números inteiros de 1 até um limite definido pelo usuário."""
 
-def imprime_inteiros(n):
-    for i in range(1, n + 1):
-        print(i)
+def imprimir_inteiros(n):
+    limite = n
+    for num in range(1, n + 1):
+        print(num)
 
-imprime_inteiros()
+entrada = int(input("Digite um limite de inteiros: "))
+
+imprimir_inteiros(entrada)
 
 
 
