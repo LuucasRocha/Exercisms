@@ -6,23 +6,14 @@ Pelo menos um número
 Pelo menos um caractere especial (!@#$%&*)
 '''
 
-senha = input("Digite uma senha: ")
-
 def validar_senha(senha):
-    if len(senha) < 8:
-        return "Senha deve ter no mínimo 8 caracteres."
-    if not any(c.isupper() for c in senha):
-        return "Senha deve conter pelo menos uma letra maiúscula."
-    if not any(c.isdigit() for c in senha):
-        return "Senha deve conter pelo menos um número."
-    if not any(c in '!@#$%&*' for c in senha):
-        return "Senha deve conter pelo menos um caractere especial (!@#$%&*)."
-    return "Senha válida!"
+    return (
+        len(senha) >= 8 and
+        any(c.isupper() for c in senha) and
+        any(c.isdigit() for c in senha) and
+        any(c in "!@#$%&*" for c in senha)
+    )
 
-resultado = validar_senha(senha)
-print(resultado)
-
-
-
+validar_senha()
 
 
