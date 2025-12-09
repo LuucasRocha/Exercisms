@@ -1,14 +1,24 @@
+import random
 #exercicio 32 - Faça um programa que leia um número inteiro e diga se ele é ou não um número primo.
 
-numero = int(input("Digite um número inteiro: "))
+def eh_primo(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
 
-if numero < 2:
-    print(f"{numero} não é um número primo.")   
-else:
-    for i in range(2, int(numero**0.5) + 1):
-        if numero % i == 0:
-            print(f"{numero} não é um número primo.")
-            break
-    else:
-        print(f"{numero} é um número primo.")
+# Retorne quantos elementos em uma lista são primos.
+lista = [random.randint(1, 10) for _ in range(10)]
+
+cont_primo = 0
+for n in lista:
+    if eh_primo(n):
+        cont_primo += 1
+        
+print(lista)
+print(cont_primo)
+
+
 
