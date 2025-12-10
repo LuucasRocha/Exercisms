@@ -1,8 +1,8 @@
 #Peça um número n e faça uma contagem regressiva até 0.
 
-def regressiva(n):
+def contagem(n):
     for i in range(n, -1, -1):
         print(i)
         
-regressiva()
+print(contagem(4))
     

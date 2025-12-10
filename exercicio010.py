@@ -1,13 +1,6 @@
 # Peça ao usuário uma palavra e mostre quantas vogais ela contém.
-def eh_volgal(palavra):
-    vogais = ("aeiou")
-    cont = 0
-    for i in palavra:
-        if i in vogais:
-            cont += 1
-    return cont
+def cont_vogais(palavra):
+    soma_vogais = sum(1 for i in palavra if i in "aeiouAEIOU")
+    return f"A palavra contém {soma_vogais} vogais."
 
-
-palavra = input("Digite uma palavra: ").lower()
-print(f"A palavra '{palavra}' contém {eh_volgal(palavra)} vogais.")
-    
+print(cont_vogais(""))

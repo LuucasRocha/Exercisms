@@ -3,9 +3,9 @@
 usuario = {
     "nome": input("Digite seu nome: "),
     "idade": int(input("Digite sua idade: ")),
-    "cidade": input("Digite o nome da sua cidade: ")
+    "cidade": input("Digite sua cidade: ")
 }
 
-print("As informações do usuário são:")
+print("Informações do usuário: ")
 for chave, valor in usuario.items():
-    print(f"{chave.capitalize()}: {valor}")
+    print(f"{chave}: {valor}")
