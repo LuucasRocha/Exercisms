@@ -1,12 +1,13 @@
-#Remova duplicados
+# Fatorial sem usar math.factorial
 
-def remover_duplicados(lista):
-    nova_lista = []
-    
-    for i in lista:
-        if i not in nova_lista:
-            nova_lista.append(i)
-    
-    return nova_lista
+def fatorial(n):
+    if n < 0:
+        return "Entrada inválida, número negativo"
+    elif n == 0:
+        return 1
+    else:
+        fat = 1
+        for i in range(2, n + 1):
+            fat *= i 
+    return fat
 
-print(remover_duplicados([2,3,4,4,5,6,7,7,8]))
