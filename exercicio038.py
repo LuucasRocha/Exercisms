@@ -1,3 +1,5 @@
+#Crie a função remover_duplicados()
+
 def remover_duplicados(lista):
     nova_lista = []
     
@@ -16,7 +18,8 @@ try:
 
 except ValueError:
     print("Erro. Digite apenas números inteiros.")
-    
+ 
+   
 sem_duplicados = remover_duplicados(lista_entrada)
 
 print(f"Lista completa: {lista_entrada}")
