@@ -58,10 +58,14 @@ print(f"Média da lista: {media_lista(lista_entrada)}")
 def fatorial(num):
     if num == 0:
         return 1
-    fatorial = 1
+    elif num < 0:
+        raise ValueError("Fatorial não definido para números negativos.")
+    
+    fat = 1
     for i in range(1, num + 1):
-        fatorial = fatorial * i
-    return fatorial
+        fat = fat * i
+    return fat
+
 
 
     
