@@ -6,11 +6,16 @@ Leitura de números até o usuário digitar 0
 mostre soma, quantidade e média
 Cálculo de fatorial (sem biblioteca)
 '''
-print("Múltiplos de 3 de 1 a 100: ")
-for i in range(1, 101):
-    if i % 3 == 0:
-        print(i)
+
+def multiplos_de_tres():
+    multiplos = []
+    for i in range(1, 101):
+        if i % 3 == 0:
+            multiplos.append(i)
+    return multiplos
         
+print(multiplos_de_tres())
+
 for i in range(1, 11):
     print("------------------")
     print(f"Tabuada do {i}: ")
