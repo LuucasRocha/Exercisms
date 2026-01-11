@@ -5,13 +5,19 @@ cont = ('zero', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis',
 
 while True:
     try:
-        entrada = int(input("Digite um número entre 0 e 20: "))
+        entrada = int(input("Digite um número inteiro entre 0 e 20: "))
     except ValueError:
-        print("Entrada inválida. ", end='')
-        continue 
+        print("Entrada inválida!", end=' ')
+        continue
     
-    if entrada > 20 or entrada < 0:
-        print("Apenas números entre 0 e 20")
+    if entrada < 0 or entrada > 20:
+        print("Erro! O número inteiro deve estar entre 0 e 20.")
     else:
-        print(f"Você digitou o número {cont[entrada]}")
-  
+        print(f"O número digitado foi {cont[entrada]}")
+        
+    escolha = input("Digite 's' para continuar ou 'n' para encerrar: ")
+    if escolha == 'N'.lower():
+        print("Programa encerrado.")
+        break
+    else:
+        continue
