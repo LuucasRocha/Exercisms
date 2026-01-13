@@ -7,17 +7,20 @@ while True:
     try:
         entrada = int(input("Digite um número inteiro entre 0 e 20: "))
     except ValueError:
-        print("Entrada inválida!", end=' ')
+        print("Entrada inválida.", end=' ')
         continue
     
-    if entrada < 0 or entrada > 20:
-        print("Erro! O número inteiro deve estar entre 0 e 20.")
+    if 20 > entrada > 0:
+        print(f"Número {cont[entrada]}.")
     else:
-        print(f"O número digitado foi {cont[entrada]}")
-        
-    escolha = input("Digite 's' para continuar ou 'n' para encerrar: ")
-    if escolha == 'N'.lower():
-        print("Programa encerrado.")
-        break
-    else:
+        print("Erro. O número deve estar entre 0 e 20.")
         continue
+    
+    escolha = input("Deseja continuar? 's'/sim - 'n'/não")
+    if escolha.lower() == 's':
+        continue
+    else:
+        print("programa encerrado")
+        break
+        
+         
