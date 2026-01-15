@@ -9,41 +9,31 @@ Adicione uma chave 'situacao' com o valor 'Aprovado' se a média for maior ou ig
 No final, exiba o conteúdo do dicionário de forma organizada. 
 '''
 
-# Criar uma lista vazia para armazenar os dicionários dos alunos
-alunos = []
+alunos = list()
 
-# Perguntar quantos alunos deseja cadastrar
-num_alunos = int(input("Quantos alunos você deseja cadastrar? "))
-
-# Loop para cadastrar cada aluno
-for i in range(num_alunos):
-    print(f"\nCadastrando aluno {i+1}:")
+try:
+    quant_aluno = int(input("Quantos alunos deseja cadastrar: "))
+except ValueError:
+    print("Entrada inválida, digite um número.", end=' ')
     
-    # Criar um dicionário vazio para o aluno atual
-    aluno = {}
-    
-    # Pedir ao usuário para inserir o nome do aluno
+for i in range(quant_aluno):
+    aluno = dict()
     nome = input("Digite o nome do aluno: ")
-    
-    # Pedir ao usuário para inserir a média do aluno
     media = float(input("Digite a média do aluno: "))
     
-    # Armazenar o nome e a média no dicionário
     aluno['nome'] = nome
     aluno['media'] = media
     
-    # Adicionar a chave 'situacao' com base na média
-    if media >= 7.0:
-        aluno['situacao'] = 'Aprovado'
+    if media > 7:
+        aluno['Situação'] = "Aprovado"
     else:
-        aluno['situacao'] = 'Reprovado'
-    
-    # Adicionar o dicionário do aluno à lista
+        aluno['Situação'] = "Reprovado"
+        
     alunos.append(aluno)
-
-# Exibir o conteúdo de todos os alunos de forma organizada
-print("\nDados de todos os alunos:")
+    
 for i, aluno in enumerate(alunos, start=1):
-    print(f"\nAluno {i}:")
-    for chave, valor in aluno.items():
-        print(f"  {chave.capitalize()}: {valor}")
+    print(f"\nDados do aluno {i}: ")
+    for k, v in aluno.items():
+        print(f"{k}: {v}")
+    
+    
