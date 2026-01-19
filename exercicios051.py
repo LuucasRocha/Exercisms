@@ -1,5 +1,5 @@
 '''
-Cadastro Simples de Alunos (Iniciante)
+Cadastro Simples de Alunos 
 Objetivo: Criar um programa que cadastre o nome e a média de um aluno e armazene essas informações em um dicionário, incluindo a situação (Aprovado/Reprovado). 
 Instruções:
 Crie um dicionário vazio.
@@ -9,31 +9,26 @@ Adicione uma chave 'situacao' com o valor 'Aprovado' se a média for maior ou ig
 No final, exiba o conteúdo do dicionário de forma organizada. 
 '''
 
-alunos = list()
+lista_alunos = list()
 
-try:
-    quant_aluno = int(input("Quantos alunos deseja cadastrar: "))
-except ValueError:
-    print("Entrada inválida, digite um número.", end=' ')
-    
-for i in range(quant_aluno):
+cont_alunos = int(input("Quantos alunos deseja cadastrar: "))
+
+for i in range(cont_alunos):
     aluno = dict()
-    nome = input("Digite o nome do aluno: ")
-    media = float(input("Digite a média do aluno: "))
     
+    nome = input(f"Digite o nome do {i + 1}º aluno: ")
+    media = float(input(f"Digite a média do {i + 1}º aluno: "))
+
     aluno['nome'] = nome
     aluno['media'] = media
-    
-    if media > 7:
-        aluno['Situação'] = "Aprovado"
+    if media >= 7:
+        aluno['situação'] = "Aprovado"    
     else:
-        aluno['Situação'] = "Reprovado"
-        
-    alunos.append(aluno)
+        aluno['situação'] = "Reprovado"
     
-for i, aluno in enumerate(alunos, start=1):
+    lista_alunos.append(aluno)
+    
+for i, aluno in enumerate(lista_alunos, start=1):
     print(f"\nDados do aluno {i}: ")
     for k, v in aluno.items():
         print(f"{k}: {v}")
-    
-    
