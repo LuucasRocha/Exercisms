@@ -43,3 +43,5 @@ while opcao != sair:
         print("Tarefa removida com sucesso.")
     elif opcao == sair:
         print("Programa encerrado.")
+        
+        
