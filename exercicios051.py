@@ -9,26 +9,24 @@ Adicione uma chave 'situacao' com o valor 'Aprovado' se a média for maior ou ig
 No final, exiba o conteúdo do dicionário de forma organizada. 
 '''
 
-lista_alunos = list()
+alunos = list()
 
-cont_alunos = int(input("Quantos alunos deseja cadastrar: "))
-
-for i in range(cont_alunos):
+for i in range(3):
     aluno = dict()
+    nome = input("Digite o nome do aluno: ")
+    media = float(input("Digite a média do aluno: "))
     
-    nome = input(f"Digite o nome do {i + 1}º aluno: ")
-    media = float(input(f"Digite a média do {i + 1}º aluno: "))
-
-    aluno['nome'] = nome
-    aluno['media'] = media
+    aluno['Nome'] = nome
+    aluno['Media'] = media
+    
     if media >= 7:
-        aluno['situação'] = "Aprovado"    
+        aluno['Situação'] = "Aprovado"
     else:
-        aluno['situação'] = "Reprovado"
+        aluno['Situação'] = "Reprovado"
     
-    lista_alunos.append(aluno)
+    alunos.append(aluno)
     
-for i, aluno in enumerate(lista_alunos, start=1):
-    print(f"\nDados do aluno {i}: ")
-    for k, v in aluno.items():
-        print(f"{k}: {v}")
+print(alunos)
+    
+    
+    
