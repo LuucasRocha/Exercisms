@@ -2,8 +2,6 @@
 
 import random
 
-lista_aleatoria = [random.randint(1, 10) for i in range(15)]
-
 def remover_duplicados(lista):
     return list(dict.fromkeys(lista))
 
@@ -14,10 +12,16 @@ def frequencia_elemento(lista):
         if numero not in frequencia:
             frequencia[numero] = 1
         else:
-            frequencia[numero] += 1
+            frequencia[numero] += 1 
     
-    return frequencia
+    return frequencia   
 
-print(f"Lista aleatória: {lista_aleatoria}")
-print(f"Lista sem duplicados: {remover_duplicados(lista_aleatoria)}")
-print(f"Frequência de cada elemento: {frequencia_elemento(lista_aleatoria)}")
+lista_aleatoria = list(random.randint(1, 10) for i in range(10))
+lista_sem_duplicados = remover_duplicados(lista_aleatoria)
+lista_frequencia = frequencia_elemento(lista_aleatoria)
+
+print(f"Lista gerada: {lista_aleatoria}")
+print(f"Lista sem duplicados: {lista_sem_duplicados}")
+print(f"Frequência dos elementos da lista: {lista_frequencia}")
+
+
