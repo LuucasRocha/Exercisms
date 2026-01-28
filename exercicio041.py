@@ -7,70 +7,73 @@ mostre soma, quantidade e média
 Cálculo de fatorial (sem biblioteca)
 '''
 
-def multiplos_de_tres():
+def multiplos_tres():
+    """Retorna uma lista de múltiplos de 3 entre 1 e 100."""
     multiplos = []
     for i in range(1, 101):
         if i % 3 == 0:
             multiplos.append(i)
     return multiplos
-        
-print(multiplos_de_tres())
 
-for i in range(1, 11):
-    print("------------------")
-    print(f"Tabuada do {i}: ")
-    for num in range(1, 11):
-        print(f"{i} x {num} = {num * i}")
-    
-lista_entrada = []
+def calcular_tabuadas():
+    """Imprime as tabuadas do 1 ao 10."""
+    for tabuada in range(1, 11):
+        print(f"\n--- Tabuada do {tabuada} ---")
+        for numero in range(1, 11):
+            resultado = numero * tabuada
+            print(f"{tabuada} x {numero} = {resultado}")
 
-while True:
-    try:
-        entrada = int(input("Digite um número inteiro (ou 0 para encerrar):"))
-    except ValueError:
-        print("Entrada inválida! Digite apenas números inteiros.")
-        continue
-    
-    if entrada == 0:
-        print("Encerrando.")
-        break
-
-    lista_entrada.append(entrada)
-    
-def soma_lista(lista):
-    return sum(num for num in lista)
-
-def quantidade_lista(lista):
-    return sum(1 for num in lista)
-
-def media_lista(lista):
-    if len(lista) != 0:
-        return sum(lista) / len(lista)
-    '''
-    ou com lógica pura:
-    soma = 0
-    quantidade = 0
-    for num in lista:
-        soma += num
-        quantidade += 1
-    return soma / quantidade
-    '''
-
-print(f"Soma da lista: {soma_lista(lista_entrada)}")
-print(f"Quantidade da lista: {quantidade_lista(lista_entrada)}")
-print(f"Média da lista: {media_lista(lista_entrada)}")
+def processar_entradas():
+    """Lê números até digitar 0 e mostra soma, quantidade e média."""
+    numeros_entrada = []
+    while True:
+        try:
+            entrada = int(input("Digite um número inteiro (ou 0 para encerrar): "))
+            
+            if entrada == 0:
+                print("Entrada de dados encerrada.")
+                break
+            
+            numeros_entrada.append(entrada)
+        except ValueError:
+            print("Erro: Digite apenas números inteiros válidos.")
+            
+    if numeros_entrada:
+        soma_total = sum(numeros_entrada)
+        qtd = len(numeros_entrada)
+        med = soma_total / qtd
+        print(f"\nResultados da lista {numeros_entrada}:")
+        print(f"Soma: {soma_total}")
+        print(f"Quantidade: {qtd}")
+        print(f"Média: {med:.2f}")
+    else:
+        print("Nenhum número foi inserido.")
 
 def fatorial(num):
-    if num == 0:
+    """Calcula o fatorial de um número de forma iterativa."""
+    if num < 0:
+        return "Erro: Não existe fatorial de número negativo."
+    if num == 0 or num == 1:
         return 1
-    elif num < 0:
-        raise ValueError("Fatorial não definido para números negativos.")
-    
     fat = 1
-    for i in range(1, num + 1):
-        fat = fat * i
+    for i in range(2, num + 1):
+        fat *= i
     return fat
 
+# --- EXECUÇÃO DO PROGRAMA ---
+
+print("=== MÚLTIPLOS DE 3 (1-100) ===")
+print(multiplos_tres())
+
+# Descomente a linha abaixo para ver a tabuada completa
+# calcular_tabuadas()
+
+print("\n=== CÁLCULO DE FATORIAL ===")
+n_fatorial = 5
+print(f"O fatorial de {n_fatorial} é: {fatorial(n_fatorial)}")
+
+print("\n=== LEITURA DE NÚMEROS ===")
+processar_entradas()
 
 
     

@@ -1,12 +1,7 @@
-import random
+#Faça um algoritmo que leia três valores inteiros diferentes e imprima na tela os valores em ordem decrescente.
 
-numeros_sorteados = tuple(random.randint(1, 5) for i in range(5))
-
-print(numeros_sorteados)
-
-def maior_menor(tupla):
-    maior = max(tupla)
-    menor = min(tupla)
-    return f"Maior: {maior}\nMenor: {menor}"
-
-print(maior_menor(numeros_sorteados))
+def imprimir_decrescente(num1, num2, num3):
+    numeros = [num1, num2, num3]
+    return sorted(numeros, reverse=True)
+    
+print(imprimir_decrescente(3, 10, 3553))
