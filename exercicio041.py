@@ -66,7 +66,7 @@ print("=== MÚLTIPLOS DE 3 (1-100) ===")
 print(multiplos_tres())
 
 # Descomente a linha abaixo para ver a tabuada completa
-# calcular_tabuadas()
+calcular_tabuadas()
 
 print("\n=== CÁLCULO DE FATORIAL ===")
 n_fatorial = 5
