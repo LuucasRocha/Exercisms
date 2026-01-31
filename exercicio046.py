@@ -2,27 +2,10 @@
 
 import random
 
-lista_gerada = [random.randint(1, 20) for i in range(10)]
+def posicoes_maiores_valores(lista):
+    return [k for k, v in enumerate(lista) if v == max(lista)]
 
-maior = 0
-menor = 0
+lista_gerada = [int(input("Digite um número inteiro: ")) for _ in range(10)]
 
-for i in lista_gerada:
-    if i > maior:
-        maior = i
-    if i < menor or menor == 0:
-        menor = i
-
-print(f"Lista gerada: {lista_gerada}")
-print(f"Maior valor: {maior} nas posições: ", end="")
-for i in range(len(lista_gerada)):
-    if lista_gerada[i] == maior:
-        print(i, end=" ")
-        
-print(f"\nMenor valor: {menor} nas posições: ", end="")
-for i in range(len(lista_gerada)):
-    if lista_gerada[i] == menor:
-        print(i, end=" ")   
-        
-
-        
+print(f"Lista: {lista_gerada}")
+print(f"Posições dos maiores valores: {posicoes_maiores_valores(lista_gerada)}")
