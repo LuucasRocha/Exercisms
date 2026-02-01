@@ -6,6 +6,7 @@ def converter_tempo(segundos):
     horas = segundos // 3600
     minutos = (segundos % 3600) // 60
     segundos_restantes = segundos % 60
+    
     return horas, minutos, segundos_restantes
 
 tempo_aleatorio = random.randint(1, 10000)
