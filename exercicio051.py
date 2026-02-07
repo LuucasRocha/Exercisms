@@ -1,5 +1,5 @@
 '''
-Cadastro Simples de Alunos 
+Cadastro de Alunos 
 Objetivo: Criar um programa que cadastre o nome e a média de um aluno e armazene essas informações em um dicionário, incluindo a situação (Aprovado/Reprovado). 
 Instruções:
 Crie um dicionário vazio.
