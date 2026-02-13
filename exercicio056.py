@@ -20,3 +20,5 @@ def calcular_tempo_jogo(hora_inicio, hora_termino):
 
     return duracao_horas, duracao_restante_minutos
 
+
+
