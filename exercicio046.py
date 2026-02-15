@@ -9,3 +9,4 @@ lista_gerada = [int(input("Digite um número inteiro: ")) for _ in range(10)]
 
 print(f"Lista: {lista_gerada}")
 print(f"Posições dos maiores valores: {posicoes_maiores_valores(lista_gerada)}")
+

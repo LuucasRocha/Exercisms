@@ -1,6 +1,6 @@
 #Mini calculadora
 def main():
-    calculadora(5, 2, "-")
+    calculadora(1, 1, "-")
 
 def calculadora(x, y, operacao):
     if operacao == "+":
