@@ -1,6 +1,6 @@
 #Implemente miau
 def main():
-    miau(5)
+    miau(20)
 
 def miau(n):
     for _ in range(n):
