@@ -1,4 +1,7 @@
 #Buscar número em agenda de contatos
+def main():
+    print(buscar_numero("Maria"))
+
 nomes = [
     {"Nome": "Carter", "Number": "2798835903"},
     {"Nome": "Alex", "Number": "2798835904"},
@@ -10,5 +13,5 @@ def buscar_numero(nome):
         if contato["Nome"] == nome:
             return contato["Number"]
     return "Não encontrado"
-            
-print(buscar_numero("Joe"))
+
+main()
